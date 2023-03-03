@@ -1,0 +1,127 @@
+.modal
+{
+  display: none;
+}
+
+.modal-backdrop
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.modal-body {
+  font-size: 1.5em;
+  display: block;
+  position: fixed;
+  height: fit-content;
+  top: 3em;
+  bottom: 3em;
+  right: 10%;
+  left: 10%;
+  background-color: white;
+  overflow: auto;
+  padding: 3em;
+  z-index: 2;
+  color: black;
+  text-transform: capitalize;
+}
+
+.modal-body>h2 {
+  margin-top: 0;
+}
+
+.modal-body>p {
+  margin-top: 0;
+}
+
+input {
+  display: block;
+}
+
+form {
+  margin-top: 0;
+}
+
+.button--close {
+  cursor: pointer;
+  position: absolute;
+  top: 0.3em;
+  right: 0.3em;
+  padding: 0.3em;
+  font-size: 2em;
+  height: 1em;
+  width: 1em;
+  text-indent: 10em;
+  overflow: hidden;
+  border: 0;
+}
+
+.button--close::after {
+  position: absolute;
+  line-height: 0.5;
+  top: 0.2em;
+  left: 0.1em;
+  text-indent: 0;
+  content: "\00D7";
+  color: white;
+}
+
+.button--register,
+.button--login {
+  float: left;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.button--register:hover, 
+.button--login:hover 
+{
+  text-decoration: underline;
+}
+
+.button--spiner.is-loading
+{
+   position: relative;
+   color: transparent;
+}
+
+.button--spiner.is-loading::after
+{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 1.4em;
+    height: 1.4em;
+    top: 50%;
+    left: 50%;
+    margin-left: -0.7em;
+    margin-top: -0.7em;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 0.5s linear infinite;
+  }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+  
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+@media (min-width: 50em) {
+  .modal-body {
+    height: auto;
+    right: 20%;
+    left: 20%;
+  }
+
+}
